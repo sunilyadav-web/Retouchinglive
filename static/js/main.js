@@ -43,6 +43,7 @@ myform.addEventListener('submit', e => {
       name: $('#name').val(),
       phone: $('#phone').val(),
       email: $('#email').val(),
+      query: $('#query').val(),
       msg: $('#msg').val(),
       csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val(),
     },

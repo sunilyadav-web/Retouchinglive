@@ -1,7 +1,6 @@
-from email import message
 from django.shortcuts import render
 from django.http import HttpResponse
-from django.core.mail import send_mail
+from baseapp.models import Contact
 
 def home(request):
     return render(request,'baseapp/index.html')
@@ -34,7 +33,16 @@ def formData(request):
         name=request.POST['name']
         phone=request.POST['phone']
         email=request.POST['email']
+        query=request.POST['query']
         message=request.POST['msg']
+        contact=Contact()
+        contact.name=name
+        contact.phone=phone
+        contact.email=email
+        contact.query=query
+        contact.message=message
+        contact.save()
+
         success="Thanks "+ name +"! We received your email and will respond shortly"
         return HttpResponse(success)
 
