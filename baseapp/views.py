@@ -3,12 +3,6 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def home(request):
-    if request.method=="POST":
-        name=request.POST['name']
-        email=request.POST['email']
-        phone=request.POST['phone']
-        message=request.POST['message']
-        return render(request,'baseapp/index.html',{'message':name})
     return render(request,'baseapp/index.html')
 
 def signup(request):
@@ -34,6 +28,16 @@ def ourWork(request):
 def contact(request):
     return render(request,'baseapp/index.html')
 
+def formData(request):
+    if request.method=="POST":
+        name=request.POST['name']
+        phone=request.POST['phone']
+        email=request.POST['email']
+        message=request.POST['msg']
+        success="Thanks "+ name +"! We received your email and will respond shortly"
+        return HttpResponse(success)
+        
+    return HttpResponse("true")
 
 def newBorn(request):
     return render(request,'baseapp/new-born.html')

@@ -13,5 +13,6 @@ urlpatterns = [
     path('new-born',newBorn,name='newborn'),
     path('infant',infant,name='infant'),
     path('materninty',materninty,name='materninty'),
-    path('fashion',fashion,name='fashion')
+    path('fashion',fashion,name='fashion'),
+    path('send-data',formData,name='contactform'),
 ]

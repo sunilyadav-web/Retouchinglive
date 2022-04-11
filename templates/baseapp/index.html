@@ -7,6 +7,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- ============ Jquery ============= -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
   <!--=============== BOXICONS ===============-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
 
@@ -15,7 +19,7 @@
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
 
   <!-- ============== GOOGLE FONTS ============= -->
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet" />
 
   <!-- ============ Fancybox ============ -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
@@ -29,7 +33,7 @@
 <body>
   <!-- ====================== Header ====================== -->
   <header class="header" id="header">
-    <nav class="nav container ">
+    <nav class="nav container">
       <a href="/" class="nav_logo">Retouchinglive</a>
       <div class="nav_menu" id="nav_menu">
         <ul class="nav_list">
@@ -56,35 +60,36 @@
       </div>
     </nav>
   </header>
-  
- <!-- ============== Mobile Header ================ -->
 
-<header class="sticky-top">
-   <nav class="navbar d-xxl-none d-xl-none d-md-none d-sm-block navbar-dark bg-dark ">
-    <div class="container-fluid">
-      <a class="navbar-brand nav_logo ps-2" href="/">Retouchinglive</a>
-      <button class="navbar-toggler" id="nav_toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="bx bx-grid-alt"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ps-2 nav-pills">
-          <li class="nav-item">
-            <a class="nav-link " aria-current="page" href="#home">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#services">services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#ourwork">Our work</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link " href="#contact">Contact Us</a>
-          </li>
-        </ul>
+  <!-- ============== Mobile Header ================ -->
+
+  <header class="sticky-top">
+    <nav class="navbar d-xxl-none d-xl-none d-md-none d-sm-block navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand nav_logo ps-2" href="/">Retouchinglive</a>
+        <button class="navbar-toggler" id="nav_toggle" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bx bx-grid-alt"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ps-2 nav-pills">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/services">services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/ourwork">Our work</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact">Contact Us</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
-</header>
+    </nav>
+  </header>
 
   <!-- ==================== SLIDER SECTION =================== -->
   <section class="section slider" id="home">
@@ -120,7 +125,7 @@
             <img src="{% static 'images/7.jpg' %}" class="img rounded" alt="" />
             <div class="services_body">
               <h3 class="services_body_title">NEW-BORN</h3>
-              <a href="{% url 'newborn' %}" target="_blank" class="btn d-block mx-2 btn-outline-warning">Know More</a>
+              <a href="{% url 'newborn' %}" class="btn d-block mx-2 btn-outline-warning">Know More</a>
             </div>
           </div>
         </div>
@@ -129,7 +134,7 @@
             <img src="{% static 'images/3.jpg' %}" class="img rounded" alt="" />
             <div class="services_body">
               <h3 class="services_body_title">INFANT</h3>
-              <a href="{% url 'infant' %}" target="_blank" class="btn d-block mx-2 btn-outline-warning">Know More</a>
+              <a href="{% url 'infant' %}" class="btn d-block mx-2 btn-outline-warning">Know More</a>
             </div>
           </div>
         </div>
@@ -138,7 +143,7 @@
             <img src="{% static 'images/1.jpg' %}" class="img rounded" alt="" />
             <div class="services_body">
               <h3 class="services_body_title">METERNINTY</h3>
-              <a href="{% url 'materninty' %}" target="_blank" class="btn d-block mx-2 btn-outline-warning">Know More</a>
+              <a href="{% url 'materninty' %}" class="btn d-block mx-2 btn-outline-warning">Know More</a>
             </div>
           </div>
         </div>
@@ -147,7 +152,7 @@
             <img src="{% static 'images/fashion.jpg' %}" class="img rounded" alt="" />
             <div class="services_body">
               <h3 class="services_body_title">FSHION</h3>
-              <a href="{% url 'fashion' %}" target="_blank" class="btn d-block mx-2 btn-outline-warning">Know More</a>
+              <a href="{% url 'fashion' %}" class="btn d-block mx-2 btn-outline-warning">Know More</a>
             </div>
           </div>
         </div>
@@ -274,7 +279,7 @@
             </div>
             <div class="contact__form-div">
               <label for="" class="contact__form-tag">Phone No.</label>
-              <input type="number" class="contact__form-input" placeholder="Insert Phone Number" id="Phone" name="phone"
+              <input type="number" class="contact__form-input" placeholder="Insert Phone Number" id="phone" name="phone"
                 required />
             </div>
 
@@ -292,20 +297,18 @@
             <button class="btn btn-warning" type="submit">Send</button>
           </form>
         </div>
+        <div class="mt-5 col-xl-6 col-md-8 col-sm-11 d-none" id="parent-alert">
+        <div class="alert alert-success " role="alert" id="alert">
+          </div>
+        </div>
       </div>
-      {% if message %}
-      <div class="text-light text-center mt-5">
-        <h3 class="">Thankyou {{message}}!</h3>
-        <small> We received your mail and will respond very shortly...</small>
-      </div>
-      {% endif %}
     </section>
     <section class="container pt-5 px-4" id="about">
       <h2 class="about_title text-light">About work</h2>
       <div class="about_body pb-3">
         <p>
-          We are india's top creative retoucher and editor. We have been working in this feild for six years.
-          and have great experience.
+          We are india's top creative retoucher and editor. We have been
+          working in this feild for six years. and have great experience.
           deserunt ducimus assumenda quae totam? Sed ea harum rem atque
           commodi. Perferendis obcaecati fugiat est optio culpa. Nobis in
           delectus suscipit eius velit aliquam repellat porro. Architecto
