@@ -1,6 +1,7 @@
 from email import message
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.core.mail import send_mail
 
 def home(request):
     return render(request,'baseapp/index.html')
@@ -36,8 +37,6 @@ def formData(request):
         message=request.POST['msg']
         success="Thanks "+ name +"! We received your email and will respond shortly"
         return HttpResponse(success)
-        
-    return HttpResponse("true")
 
 def newBorn(request):
     return render(request,'baseapp/new-born.html')

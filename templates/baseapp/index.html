@@ -282,16 +282,30 @@
               <input type="number" class="contact__form-input" placeholder="Insert Phone Number" id="phone" name="phone"
                 required />
             </div>
-
+            
             <div class="contact__form-div">
               <label for="" class="contact__form-tag">Mail</label>
               <input type="mail" placeholder="Insert Your Email" class="contact__form-input" id="email" name="email"
                 required />
             </div>
 
+            <div class="contact__form-div">
+              <!-- <label for="" class="contact__form-tag">Query </label>
+              <input type="number" class="contact__form-input" placeholder="Insert Phone Number" id="phone" name="phone"
+                required /> -->
+                <select class="contact__form-select text-light" aria-label="Default select example">
+                  <option selected>Please Select Your Query</option>
+                  <option value="Fashion">Fashion</option>
+                  <option value="Materninty">Materninty</option>
+                  <option value="New-born">New-Born</option>
+                  <option value="Infant">Infant</option>
+                  <option value="other">Other</option>
+                </select>
+            </div>
+
             <div class="contact__form-div contact__form-area">
               <label for="" class="contact__form-tag">Message</label>
-              <textarea name="message" placeholder="Write Your Message" cols="30" rows="10" class="contact__form-input"
+              <textarea name="message" placeholder="Write Your Message" cols="30" rows="8" class="contact__form-input"
                 id="msg" required></textarea>
             </div>
             <button class="btn btn-warning" type="submit">Send</button>
