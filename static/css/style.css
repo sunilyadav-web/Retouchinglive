@@ -1,0 +1,402 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+/* ==================== VARIABLE CSS ===================== */
+
+:root {
+  --header-height: 3rem;
+  /* ========== Colors =============== */
+  --hue: 45;
+  --sat: 98%;
+  --first-color: hsl(var(--hue), var(--sat), 60%);
+  --first-color-light: hsl(var(--hue), var(--sat), 85%);
+  --first-color-lighten: hsl(var(--hue), var(--sat), 80%);
+  --first-color-alt: hsl(var(--hue), var(--sat), 53%);
+  --title-color: hsl(var(--hue), 4%, 15%);
+  --text-color: hsl(var(--hue), 4%, 35%);
+  --text-color-light: hsl(var(--hue), 4%, 65%);
+  --body-color: hsl(var(--hue), 0%, 100%);
+  --container-color: #FFF;
+  --scroll-bar-color: hsl(var(--hue), 4%, 85%);
+  --scroll-thumb-color: hsl(var(--hue), 4%, 75%);
+  /* ================ Font and typography ============== */
+  --body-font: "Poppins", sans-serif;
+  --biggest-font-size: 2rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+  /* ============ Font weight =============== */
+  --font-semi-bold: 600;
+  --font-bold: 700;
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+
+  /* ============= Nav bar========== */
+  --navbar-bg-color: hsl(0, 0%, 15%);
+  --navbar-text-color: hsl(0, 0%, 85%);
+  --navbar-text-color-focus: white;
+  --navbar-bg-contrast: hsl(0, 0%, 25%);
+}
+
+@media screen and (min-width: 968px) {
+  :root {
+    --biggest-font-size: 3rem;
+    --h2-font-size: 1.75rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+  }
+}
+
+/*=============== BASE ===============*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  transition: 0.5s;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: var(--font-semi-bold);
+  line-height: 1.5;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ============== HEADER =============== */
+
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  color: white;
+  transition: 0.5s;
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav_logo {
+  margin-left: 0.5rem;
+  font-family: 'Dancing Script', cursive;
+  font-size: 25px;
+}
+.nav_logo:hover{
+  color: #ffff;
+}
+
+.nav_menu {
+  position: relative;
+  padding-top: 1rem;
+}
+
+.nav_list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav_item {
+  margin: 0px .7rem;
+}
+.nav_item a:hover{
+color: #e0e0e0e3;
+}
+
+.nav_toggle {
+  display: none;
+}
+.scroll-header{
+  background-color: #363434d6;
+  /* box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1); */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.242);
+}
+@media screen and (max-width: 767px) {
+  .header{
+    display: none;
+  }
+  /* .nav {
+    padding: .3rem 1rem;
+  } 
+
+  .nav_menu {
+    position: relative;
+    display: none;
+  }
+*/
+
+ #nav_toggle {
+    font-size: 1.75rem;
+    color: #dfdddd;
+    outline: none;
+    border: none;
+  } 
+  #nav_toggle:focus{
+    box-shadow: none;
+    outline: none;
+
+  }
+}
+/* ============== SLIDER ================= */
+#home{
+  transition: .3s;
+}
+/*=============== SCROLL BAR ===============*/
+::-webkit-scrollbar {
+  width: .6rem;
+  border-radius: .5rem;
+  background-color: hsla(219, 8%, 38%);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsl(219, 8%, 26%);
+  border-radius: .5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(219, 8%, 20%);
+}
+
+/* ====================== SERVICES ===================== */
+#services{
+  transition: .3s;
+}
+.services_title{
+  font-size: var(--h2-font-size);
+  text-align: center;
+  padding-top: 1.5rem;
+  /* font-family:'Courier New', Courier, monospace; */
+  font-weight: var(--font-semi-bold);
+
+}
+
+.services_card{
+  background-color: #404040;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  transition: all .8s ease-in-out;
+}
+.services_card:hover{
+  transform: scale(1.1); 
+}
+
+.services_body_title{
+  font-size: var(--h3-font-size);
+  text-align: center;
+  font-weight: normal;
+  color: white;
+
+}
+
+/* ================ OUR WORK ===================== */
+#ourwork{
+  transition: .3s;
+}
+.ourwork_title{
+  font-size:var(--h2-font-size);
+  text-align: center;
+  padding-top: 1.5rem;
+}.item{
+  transition: 0.5s ease-in-out;
+}
+.item:hover{
+  filter: brightness(75%);
+
+}
+.item a img{
+  inline-size: 100%;
+  aspect-ratio: 13/9;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+
+/* ================ CONTACT =============== */
+
+.contact__title{
+  font-size: var(--h2-font-size);
+  text-align: center;
+  padding-top: 1.5rem;
+  font-weight:var(--font-semi-bold);
+  color: white;
+}
+
+.contact__title_main {
+  text-align: center;
+  font-size: var(--h2-font-size);
+  color: #fff;
+}
+
+.contact__title {
+  text-align: center;
+  font-size: var(--h3-font-size);
+  margin-bottom: 1.5rem;
+}
+
+.contact__info {
+  display: grid;
+  gap: 1rem;
+}
+
+.contact__card {
+  background-color:#404040;
+  padding: 1rem;
+  border-radius: .75rem;
+  text-align: center;
+  color: #fff;
+}
+
+.contact__card-icon {
+  font-size: 2rem;
+  color:white;
+  margin-bottom: 0.25rem;
+}
+
+.contact__card-title,
+.contact__card-data {
+  font-size: var(--small-font-size);
+}
+
+.contact__card-title {
+  font-weight: var(--font-medium);
+}
+
+.contact__card-data {
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.contact__button {
+  color:var(--first-color);
+  font-size: var(--small-font-size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: .25rem;
+}
+
+.contact__button:hover .contact__button-icon {
+  transform: translateX(.25rem);
+  color: var(--first-color-light);
+}
+.contact__button:hover{
+  color: var(--first-color-light);
+}
+
+.contact__button-icon {
+  transition: .4s;
+  font-size: 1rem;
+}
+
+.contact__form-div {
+  position: relative;
+  margin-bottom: 2rem;
+  height: 4rem;
+}
+
+.contact__form-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid white;
+  background: none;
+  /* color: var(--text-color); */
+  outline: none;
+  padding: 1.5rem;
+  border-radius: .75rem;
+  z-index: 1;
+  color: #d9d9d9;
+}
+
+.contact__form-tag {
+  position: absolute;
+  top: -.75rem;
+  left: 1.25rem;
+  font-size: var(--smaller-font-size);
+  padding: .25rem;
+  background-color: #212529;
+  z-index: 10;
+  color: #FFF;
+}
+
+.contact__form-area {
+  height: 11rem;
+}
+
+.contact__form-area textarea {
+  resize: none;
+}
+
+/* Change the white to any color */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px #212529 inset !important;
+}
+
+/*Change text in autofill textbox*/
+
+input:-webkit-autofill{
+  -webkit-text-fill-color: #d9d9d9 !important;
+}
+/* =============== ABOUT WORK ================ */
+
+.about_title{
+  font-size: var(--h2-font-size);
+}
+.about_body {
+  color: #f3f3f3e6;
+  font-size: var(--small-font-size);
+  text-align: justify;
+}
+
+/* whatsapp chat */
+.whatsapp_float{
+  font-size: 20px;
+}
+.whatsapp_float img{
+  height: 50px;
+  position: fixed;
+  right: 40px;
+  bottom: 50px;
+
+}

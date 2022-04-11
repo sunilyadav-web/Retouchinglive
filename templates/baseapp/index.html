@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!--=============== BOXICONS ===============-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+
+  <!-- =============== BOOTSTRAP ================ -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+
+  <!-- ============== GOOGLE FONTS ============= -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+
+  <!-- ============ Fancybox ============ -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+
+  <!-- ================ CSS ================ -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+  <title>Retouchinglive.com</title>
+</head>
+
+<body>
+  <!-- ====================== Header ====================== -->
+  <header class="header" id="header">
+    <nav class="nav container ">
+      <a href="/" class="nav_logo">Retouchinglive</a>
+      <div class="nav_menu" id="nav_menu">
+        <ul class="nav_list">
+          <li class="nav_item">
+            <a href="/home" class="nav_link">Home</a>
+          </li>
+          <li class="nav_item">
+            <a href="/services" class="nav_link">Services</a>
+          </li>
+          <li class="nav_item">
+            <a href="/our-work" class="nav_link">Our Work</a>
+          </li>
+          <li class="nav_item">
+            <a href="/contact" class="nav_link">Contact Us</a>
+          </li>
+
+          <!-- <li class="nav_item">
+            <a href="/signup" class="nav_link">Signup</a>
+          </li> -->
+        </ul>
+      </div>
+      <div class="nav_toggle" id="nav_toggle">
+        <i class="bx bx-grid-alt"></i>
+      </div>
+    </nav>
+  </header>
+  
+ <!-- ============== Mobile Header ================ -->
+
+<header class="sticky-top">
+   <nav class="navbar d-xxl-none d-xl-none d-md-none d-sm-block navbar-dark bg-dark ">
+    <div class="container-fluid">
+      <a class="navbar-brand nav_logo ps-2" href="/">Retouchinglive</a>
+      <button class="navbar-toggler" id="nav_toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bx bx-grid-alt"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ps-2 nav-pills">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#services">services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#ourwork">Our work</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="#contact">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+  <!-- ==================== SLIDER SECTION =================== -->
+  <section class="section slider" id="home">
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{% static 'slide/1.jpg' %}" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'slide/2.jpg' %}" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'slide/3.jpg' %}" class="d-block w-100" alt="..." />
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+  <main class="bg-dark">
+    <!-- ===================== SERVICES SECTION ===================== -->
+    <section class="container pt-5" id="services">
+      <h2 class="text-light services_title">Services We Offer</h2>
+      <div class="row px-2 px-sm-0 mt-5">
+        <div class="mb-3 col-xl-3 col-md-6 col-sm-12">
+          <div class="services_card p-2 rounded">
+            <img src="{% static 'images/7.jpg' %}" class="img rounded" alt="" />
+            <div class="services_body">
+              <h3 class="services_body_title">NEW-BORN</h3>
+              <a href="{% url 'newborn' %}" target="_blank" class="btn d-block mx-2 btn-outline-warning">Know More</a>
+            </div>
+          </div>
+        </div>
+        <div class="mb-3 col-xl-3 col-md-6 col-sm-12">
+          <div class="services_card p-2 rounded">
+            <img src="{% static 'images/3.jpg' %}" class="img rounded" alt="" />
+            <div class="services_body">
+              <h3 class="services_body_title">INFANT</h3>
+              <a href="{% url 'infant' %}" target="_blank" class="btn d-block mx-2 btn-outline-warning">Know More</a>
+            </div>
+          </div>
+        </div>
+        <div class="mb-3 col-xl-3 col-md-6 col-sm-12">
+          <div class="services_card p-2 rounded">
+            <img src="{% static 'images/1.jpg' %}" class="img rounded" alt="" />
+            <div class="services_body">
+              <h3 class="services_body_title">METERNINTY</h3>
+              <a href="{% url 'materninty' %}" target="_blank" class="btn d-block mx-2 btn-outline-warning">Know More</a>
+            </div>
+          </div>
+        </div>
+        <div class="mb-3 col-xl-3 col-md-6 col-sm-12">
+          <div class="services_card p-2 rounded">
+            <img src="{% static 'images/fashion.jpg' %}" class="img rounded" alt="" />
+            <div class="services_body">
+              <h3 class="services_body_title">FSHION</h3>
+              <a href="{% url 'fashion' %}" target="_blank" class="btn d-block mx-2 btn-outline-warning">Know More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= OUR WORK =================== -->
+
+    <section class="container pt-5" id="ourwork">
+      <h2 class="ourwork_title text-light">Our Work</h2>
+      <div class="row mt-5 px-2 px-sm-0">
+        <div class="col-xl-3 col-md-4 col-sm-12 mb-4 item">
+          <a data-fancybox="gallery" href="{% static 'images/6.jpg' %}">
+            <img src="{% static 'images/6.jpg' %}" class="hover-shadow cursor" />
+          </a>
+        </div>
+        <div class="col-xl-3 col-md-4 col-sm-12 mb-4 item">
+          <a href="{% static 'images/5.jpg' %}" class="fancybox" data-fancybox="gallery">
+            <img src="{% static 'images/5.jpg' %}" class="hover-shadow cursor" />
+          </a>
+        </div>
+        <div class="col-xl-3 col-md-4 col-sm-12 mb-4 item">
+          <a href="{% static 'images/f1.jpg' %}" class="fancybox" data-fancybox="gallery">
+            <img src="{% static 'images/f1.jpg' %}" class="hover-shadow cursor" />
+          </a>
+        </div>
+        <div class="col-xl-3 col-md-4 col-sm-12 mb-4 item">
+          <a href="{% static 'images/8.jpg' %}" class="fancybox" data-fancybox="gallery">
+            <img src="{% static 'images/8.jpg' %}" class="hover-shadow cursor" />
+          </a>
+        </div>
+        <div class="col-xl-3 col-md-4 col-sm-12 mb-4 item">
+          <a href="{% static 'images/1.jpg' %}" class="fancybox" data-fancybox="gallery">
+            <img src="{% static 'images/1.jpg' %}" class="hover-shadow cursor" />
+          </a>
+        </div>
+
+        <div class="col-xl-3 col-md-4 col-sm-12 mb-4 item">
+          <a href="{% static 'images/7.jpg' %}" class="fancybox" data-fancybox="gallery">
+            <img src="{% static 'images/7.jpg' %}" class="hover-shadow cursor" />
+          </a>
+        </div>
+        <div class="col-xl-3 col-md-4 col-sm-12 mb-4 item">
+          <a href="{% static 'images/14.jpg' %}" class="fancybox" data-fancybox="gallery">
+            <img src="{% static 'images/14.jpg' %}" class="hover-shadow cursor" />
+          </a>
+        </div>
+        <div class="col-xl-3 col-md-4 col-sm-12 mb-4 item">
+          <a href="{% static 'images/15.jpg' %}" class="fancybox" data-fancybox="gallery">
+            <img src="{% static 'images/15.jpg' %}" class="hover-shadow cursor" />
+          </a>
+        </div>
+        <!-- <div class="col-xl-3 col-md-4 col-sm-12 mb-4 item">
+          <a href="{% static 'images/11.jpg' %}" class="fancybox" data-fancybox="gallery">
+            <img src="{% static 'images/11.jpg' %}" class="hover-shadow cursor" />
+          </a>
+        </div>
+        <div class="col-xl-3 col-md-4 col-sm-12 mb-4 item">
+          <a href="{% static 'images/13.jpg' %}" class="fancybox" data-fancybox="gallery">
+            <img src="{% static 'images/13.jpg' %}" class="hover-shadow cursor" />
+          </a>
+        </div>
+        <div class="col-xl-3 col-md-4 col-sm-12 mb-4 item">
+          <a href="{% static 'images/15.jpg' %}" class="fancybox" data-fancybox="gallery">
+            <img src="{% static 'images/14.jpg' %}" class="hover-shadow cursor" />
+          </a>
+        </div>
+        <div class="col-xl-3 col-md-4 col-sm-12 mb-4 item">
+          <a href="{% static 'images/12.jpg' %}" class="fancybox" data-fancybox="gallery">
+            <img src="{% static 'images/12.jpg' %}" class="hover-shadow cursor" />
+          </a>
+        </div> -->
+      </div>
+    </section>
+
+    <!-- ================== CONTACT FORM ======================== -->
+    <section class="container pt-5" id="contact">
+      <h2 class="contact__title_main mt-2">Conctact Me</h2>
+      <p class="contact_para text-light text-center">
+        Have doubt or suggestion to make? Feel free to ask anything.
+      </p>
+      <div class="row justify-content-center mt-4">
+        <div class="col-xl-4 col-md-5 col-sm-11">
+          <h3 class="contact__title">Talk to me</h3>
+          <div class="contact__info">
+            <div class="contact__card">
+              <i class="bx bx-mail-send contact__card-icon"></i>
+              <h3 class="contact__card-title">Email</h3>
+              <span class="contact__card-data">retouchinglive@gmail.com</span>
+              <a href="mailto:retouchinglive@gmail.com" target="_blank" class="contact__button">
+                Write Me<i class="bx bx-right-arrow-alt contact__button-icon"></i>
+              </a>
+            </div>
+
+            <div class="contact__card">
+              <i class="bx bxl-whatsapp contact__card-icon"></i>
+              <h3 class="contact__card-title">Whatsapp</h3>
+              <span class="contact__card-data">+91-8459775823</span>
+              <a href="https://wa.me/+918459775823?text=I'm%20interested%20in%20to%20develop%20your%20website"
+                target="_blank" class="contact__button">
+                Chat Me<i class="bx bx-right-arrow-alt contact__button-icon"></i>
+              </a>
+            </div>
+
+            <div class="contact__card">
+              <i class="bx bxs-phone-call contact__card-icon"></i>
+              <h3 class="contact__card-title">Phone</h3>
+              <span class="contact__card-data" id="number">+91-8459775823</span>
+              <a class="contact__button" href="tel:+918459775823" style="cursor: pointer">
+                Call Me<i class="bx bx-right-arrow-alt contact__button-icon"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-4 col-md-5 col-sm-11">
+          <h3 class="contact__title">Write me your Work</h3>
+          <form class="contact__form" method="POST" name="contact" id="form">
+            {% csrf_token %}
+            <div class="contact__form-div">
+              <label for="" class="contact__form-tag">Name</label>
+              <input type="text" class="contact__form-input" placeholder="Insert Your Name" id="name" name="name"
+                required />
+            </div>
+            <div class="contact__form-div">
+              <label for="" class="contact__form-tag">Phone No.</label>
+              <input type="number" class="contact__form-input" placeholder="Insert Phone Number" id="Phone" name="phone"
+                required />
+            </div>
+
+            <div class="contact__form-div">
+              <label for="" class="contact__form-tag">Mail</label>
+              <input type="mail" placeholder="Insert Your Email" class="contact__form-input" id="email" name="email"
+                required />
+            </div>
+
+            <div class="contact__form-div contact__form-area">
+              <label for="" class="contact__form-tag">Message</label>
+              <textarea name="message" placeholder="Write Your Message" cols="30" rows="10" class="contact__form-input"
+                id="msg" required></textarea>
+            </div>
+            <button class="btn btn-warning" type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+      {% if message %}
+      <div class="text-light text-center mt-5">
+        <h3 class="">Thankyou {{message}}!</h3>
+        <small> We received your mail and will respond very shortly...</small>
+      </div>
+      {% endif %}
+    </section>
+    <section class="container pt-5 px-4" id="about">
+      <h2 class="about_title text-light">About work</h2>
+      <div class="about_body pb-3">
+        <p>
+          We are india's top creative retoucher and editor. We have been working in this feild for six years.
+          and have great experience.
+          deserunt ducimus assumenda quae totam? Sed ea harum rem atque
+          commodi. Perferendis obcaecati fugiat est optio culpa. Nobis in
+          delectus suscipit eius velit aliquam repellat porro. Architecto
+          nulla hic dolor optio, dicta veritatis et omnis beatae quam
+          recusandae quod laborum alias ullam consectetur illum quasi ab natus
+          sequi quia fugiat dolorum, dolorem nostrum quibusdam quidem!
+          Tenetur, quia quos, cum dolore necessitatibus libero est, commodi
+          atque voluptatibus itaque iste. Molestiae odit aperiam
+          necessitatibus mollitia earum, tenetur ullam tempora cumque placeat
+          animi maiores vitae, quia esse. Est aliquid corporis, quia illo,
+          tempora veniam blanditiis cumque nihil vero, animi soluta. Veniam
+          eius vel repellat impedit.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- whatsaap Chat -->
+  <div class="whatsapp_float">
+    <a href="https://wa.me/918459775823" target="_blank"><img src="{% static 'icons/whatsapp.png' %}" alt="" /></a>
+  </div>
+
+  <!-- =============== FOOTER =================== -->
+
+  <footer class="bg-light pb-2">
+    <div class="container">
+      <div class="row pb-5">
+        <div class="col-12 col-sm-6 ps-3 ps-sm-5 mt-3 d-flex flex-column align-items-cneter">
+          <h3 class="text-decoration-underline">Work</h3>
+          <span class="addfont">Materninty | New born | Fashion | Infant | Prodcut <br />And much
+            more.
+          </span>
+          <br />
+          <span><b>Retoucher (Vicky)</b></span>
+        </div>
+        <!-- <div class="w-100"></div> -->
+        <div class="col-12 col-sm-6 mt-3 ps-3 ps-sm-5">
+          <h3 class="text-decoration-underline">Contact</h3>
+          <span class="addfont">Phone - +918459775823 <br />
+            Email - retouchinglive@gmail.com</span>
+          <div class="mt-2">
+            <ul class="list-unstyled d-flex">
+              <span><b>Connect with us</b></span>
+              <li class="ms-3">
+                <a class="link-dark" href="https://www.instagram.com/retouchinglive/" target="_blank"><img
+                    src="https://img.icons8.com/material-rounded/25/000000/instagram-new.png" /></a>
+              </li>
+              <li class="ms-3">
+                <a class="link-dark" href="https://www.facebook.com/varunyadav.retoucher" target="_blank"><img
+                    src="https://img.icons8.com/ios-glyphs/30/000000/facebook-new.png" /></a>
+              </li>
+            </ul>
+            <ul class="list-unstyled d-flex">
+              <span><b> Made By -</b></span>
+              <li>
+                <a href="https://linkedin.com/in/sunilyadavcode/" target="_blank"
+                  class="text-decoration-none text-dark ps-1" style="font-weight: 600">
+                  Sunil Yadav
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <p class="text-center">© 2021 Retouchinglive.com All rights reserved</p>
+    </div>
+  </footer>
+
+  <!-- ================  Bootstrap Script================= -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+  <!-- ================= Main JS Script ================ -->
+  <script src="{% static 'js/main.js' %}"></script>
+
+  <!-- =========== Fancybox Script ================ -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+</body>
+
+</html>
