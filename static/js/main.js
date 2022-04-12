@@ -75,3 +75,11 @@ window.onload = function () {
     window.scroll(0, 0)
   }
 }
+
+// ============ Get Current Year =============
+
+window.onload=function(){
+  const d = new Date();
+  let year = d.getFullYear();
+  document.getElementById("year").innerHTML = year;
+}

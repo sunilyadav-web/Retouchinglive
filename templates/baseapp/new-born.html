@@ -3,10 +3,10 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--=============== BOXICONS ===============-->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--=============== BOXICONS ===============-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
 
   <!-- =============== BOOTSTRAP ================ -->
@@ -14,7 +14,7 @@
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
 
   <!-- ============== GOOGLE FONTS ============= -->
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet" />
 
   <!-- ============ Fancybox ============ -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
@@ -26,141 +26,154 @@
 </head>
 
 <body>
-    <!-- ================= Header ===================  -->
-    <header class="header" id="header">
-        <nav class="nav container ">
-          <a href="/" class="nav_logo">Retouchinglive</a>
-          <div class="nav_menu" id="nav_menu">
-            <ul class="nav_list">
-              <li class="nav_item">
-                <a href="/home" class="nav_link">Home</a>
-              </li>
-              <li class="nav_item">
-                <a href="/services" class="nav_link">Services</a>
-              </li>
-              <li class="nav_item">
-                <a href="/ourwork" class="nav_link">Our Work</a>
-              </li>
-              <li class="nav_item">
-                <a href="/contact" class="nav_link">Contact Us</a>
-              </li>
-    
-              <!-- <li class="nav_item">
+  <!-- ================= Header ===================  -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="/" class="nav_logo">Retouchinglive</a>
+      <div class="nav_menu" id="nav_menu">
+        <ul class="nav_list">
+          <li class="nav_item">
+            <a href="/home" class="nav_link">Home</a>
+          </li>
+          <li class="nav_item">
+            <a href="/services" class="nav_link">Services</a>
+          </li>
+          <li class="nav_item">
+            <a href="/ourwork" class="nav_link">Our Work</a>
+          </li>
+          <li class="nav_item">
+            <a href="/contact" class="nav_link">Contact Us</a>
+          </li>
+
+          <!-- <li class="nav_item">
                 <a href="/signup" class="nav_link">Signup</a>
               </li> -->
+        </ul>
+      </div>
+      <div class="nav_toggle" id="nav_toggle">
+        <i class="bx bx-grid-alt"></i>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ============== Mobile Header ================ -->
+
+  <header class="sticky-top">
+    <nav class="navbar d-xxl-none d-xl-none d-md-none d-sm-block navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand nav_logo ps-2" href="/">Retouchinglive</a>
+        <button class="navbar-toggler" id="nav_toggle" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bx bx-grid-alt"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ps-2 nav-pills">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services">services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ourwork">Our work</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- =================== New Born ================== -->
+
+  <section class="bg-dark text-light pt-5 pb-5 ">
+    <div class="container pt-5 pb-3">
+      <h4 class="text-center pb-4 text-warning">New Born Package</h4>
+      <div class="row">
+        <div class="col-11 col-sm-6">
+          <img src="{% static 'images/7.jpg' %}" class="rounded img-fluid" alt="" />
+        </div>
+        <div class="col-11 col-sm-6 pt-sm-0 pt-4 center-block">
+          <h3 class="text-center newborn_title">Best Package for your New born Baby</h3>
+          <p class="newborn-description px-3">
+            We provide best retouching and editing for your new born baby.
+            sit amet consectetur adipisicing elit. Nihil exercitationem
+            molestiae dignissimos magnam porro fuga amet accusamus blanditiis
+            ratione atque deleniti ab officia aliquam, sint placeat! Rem
+            ducimus esse magnam!
+          </p>
+          
+          <h3 class="text-center newborn_title">Pricing</h3>
+          <p class="newborn-description px-3">
+            <b>Basic</b> - plan for the new born baby ₹100 Per Image. <br>
+            <b>Advance</b> - plan for the new born baby ₹150 Per Image. <br>
+            <b>Premium</b> - plan for the new born baby ₹200 Per Image.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== FOOTER =================== -->
+
+  <footer class="bg-light pb-2">
+    <div class="container">
+      <div class="row pb-5">
+        <div class="col-12 col-sm-6 ps-3 ps-sm-5 mt-3 d-flex flex-column align-items-cneter">
+          <h3 class="text-decoration-underline">Work</h3>
+          <span class="addfont">Materninty | New born | Fashion | Infant | Prodcut <br />And much
+            more.
+          </span>
+          <br />
+          <span><b>Retoucher (Vicky)</b></span>
+        </div>
+        <!-- <div class="w-100"></div> -->
+        <div class="col-12 col-sm-6 mt-3 ps-3 ps-sm-5">
+          <h3 class="text-decoration-underline">Contact</h3>
+          <span class="addfont">Phone - +918459775823 <br />
+            Email - retouchinglive@gmail.com</span>
+          <div class="mt-2">
+            <ul class="list-unstyled d-flex">
+              <span><b>Connect with us</b></span>
+              <li class="ms-3">
+                <a class="link-dark" href="https://www.instagram.com/retouchinglive/" target="_blank"><img
+                    src="https://img.icons8.com/material-rounded/25/000000/instagram-new.png" /></a>
+              </li>
+              <li class="ms-3">
+                <a class="link-dark" href="https://www.facebook.com/varunyadav.retoucher" target="_blank"><img
+                    src="https://img.icons8.com/ios-glyphs/30/000000/facebook-new.png" /></a>
+              </li>
+            </ul>
+            <ul class="list-unstyled d-flex">
+              <span><b> Made By -</b></span>
+              <li>
+                <a href="https://linkedin.com/in/sunilyadavcode/" target="_blank"
+                  class="text-decoration-none text-dark ps-1" style="font-weight: 600">
+                  Sunil Yadav
+                </a>
+              </li>
             </ul>
           </div>
-          <div class="nav_toggle" id="nav_toggle">
-            <i class="bx bx-grid-alt"></i>
-          </div>
-        </nav>
-      </header>
-      
-     <!-- ============== Mobile Header ================ -->
+        </div>
+      </div>
+      <p class="text-center">©<span id="year">2022</span>Retouchinglive.com All rights reserved</p>
+    </div>
+  </footer>
     
-    <header class="sticky-top">
-       <nav class="navbar d-xxl-none d-xl-none d-md-none d-sm-block navbar-dark bg-dark ">
-        <div class="container-fluid">
-          <a class="navbar-brand nav_logo ps-2" href="/">Retouchinglive</a>
-          <button class="navbar-toggler" id="nav_toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="bx bx-grid-alt"></i>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ps-2 nav-pills">
-              <li class="nav-item">
-                <a class="nav-link " aria-current="page" href="home">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="services">services</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="ourwork">Our work</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link " href="contact">Contact Us</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
 
-<!-- =================== New Born ================== -->
+  <!-- ================  Bootstrap Script================= -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
 
-    <section class="bg-secondary p-5">
-        <div class="container">
-            <h4 class="text-center pb-4 text-warning ">New Born Package</h4>
-            <div class="row">
-                <div class="col-12 col-sm-6">
-                    <img src="{% static 'images/7.jpg' %}" class="rounded img-fluid" alt="">
-                </div>
-                <div class="col pt-sm-0 pt-4 center-block">
-                    <span class="text-center"><b> Package Start From </b></span>
-                    <p>sum dolor sit amet, consectetur adipisicing elit. Repellendus, perspiciatis excepturi sunt maiores rem adipisci esse quod impedit voluptate. Temporibus fuga vero veniam illum sequi eveniet placeat ab architecto recusandae.</p>
-                    <p>sit amet consectetur adipisicing elit. Nihil exercitationem molestiae dignissimos magnam porro fuga amet accusamus blanditiis ratione atque deleniti ab officia aliquam, sint placeat! Rem ducimus esse magnam!</p>
-                    <p>consectetur adipisicing elit. Eos fugit quia labore error commodi, quibusdam praesentium excepturi sapiente libero numquam exercitationem omnis enim magni. Magnam, amet esse! Beatae, itaque voluptatibus?</p>
-                </div>
-                <div class="col-12 col-sm-6 mt-4">
-                    <img src="{% static 'images/15.jpg' %}" class="rounded img-fluid" alt="">
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- ================= Main JS Script ================ -->
+  <script src="{% static 'js/main.js' %}"></script>
 
-    <!-- footer -->
-    <footer class="bg-light pb-2">
-        <div class="container">
-            <div class="row pb-5 ">
-                <div class="col-12 col-sm-6 ps-3 ps-sm-5  mt-3 d-flex flex-column align-items-cneter">
-                    <h3 class="text-decoration-underline">Work</h3>
-                    <span class="addfont">Materninty | New born | Fashion | Infant | Prodcut
-                    <br>And much more.
-                </span>
-                    <br>
-                    <span><b>Retoucher (Vicky)</b></span>
-                </div>
-                <!-- <div class="w-100"></div> -->
-                <div class="col-12 col-sm-6 mt-3  ps-3 ps-sm-5 ">
-                    <h3 class="text-decoration-underline ">Contact</h3>
-                    <span class="addfont">Phone - +918459775823 <br>
-                Email - retouchinglive@gmail.com</span>
-                    <div class="mt-2">
-                        <ul class="list-unstyled d-flex">
-                            <span><b>Connect with us</b></span>
-                            <li class="ms-3">
-                                <a class="link-dark" href="#"><img src="https://img.icons8.com/ios-glyphs/25/000000/twitter--v1.png" /></a>
-                            </li>
-                            <li class="ms-3">
-                                <a class="link-dark" href="#"><img src="https://img.icons8.com/material-rounded/25/000000/instagram-new.png" /></a>
-                            </li>
-                            <li class="ms-3">
-                                <a class="link-dark" href="#"><img src="https://img.icons8.com/ios-glyphs/30/000000/facebook-new.png" /></a>
-                            </li>
-                        </ul>
-                        <ul class="list-unstyled d-flex">
-                            <span><b> Made By -</b></span>
-                            <li><a href="https://linkedin.com/in/sunilyadavcode/" target="_blank" class="text-decoration-none text-dark ps-1" style="font-weight: 600;"> Sunil Yadav </a></li>
-                    </ul>
-                    </div>
-                </div>
-            </div>
-            <p class="center"> © 2021 Retouchinglive.com All rights reserved </p>
-        </div>
-    </footer>
-
-
-
-<!-- ================  Bootstrap Script================= -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-crossorigin="anonymous"></script>
-
-<!-- ================= Main JS Script ================ -->
-<script src="{% static 'js/main.js' %}"></script>
-
-<!-- =========== Fancybox Script ================ -->
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+  <!-- =========== Fancybox Script ================ -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 </body>
 
 </html>

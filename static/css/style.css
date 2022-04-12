@@ -404,3 +404,22 @@ input:-webkit-autofill{
   bottom: 50px;
 
 }
+
+/* ============ Footer ============= */
+
+.footer{
+  background-color:#e3e4e5;
+  padding: 1rem;
+}
+
+/* ============ New Born Pakage ============= */
+
+.newborn_title{
+  font-size: var(--h3-font-size);
+}
+
+.newborn-description{
+  font-size: var(--normal-font-size);
+  text-align: justify;
+  color: #f3f3f3d9;
+}
